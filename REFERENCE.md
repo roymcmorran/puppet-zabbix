@@ -87,6 +87,7 @@ class { 'zabbix':
 class { 'zabbix::agent':
   zabbix_package_agent  => 'zabbix-agent2',
   agent_configfile_path => '/etc/zabbix/zabbix_agent2.conf',
+  include_dir           => '/etc/zabbix/zabbix_agent2.d',
   pidfile               => '/var/run/zabbix/zabbix_agentd2.pid',
   servicename           => 'zabbix-agent2',
   binary_location       => '/usr/sbin/zabbix_agent2'
