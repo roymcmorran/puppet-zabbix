@@ -1668,7 +1668,7 @@ Default value: `$zabbix::params::agent_sourceip`
 
 ##### <a name="-zabbix--agent--allowkey"></a>`allowkey`
 
-Data type: `Optional[String[1]]`
+Data type: `Optional[Variant[String[1],Array[String[1]]]]`
 
 Allow execution of item keys matching pattern.
 
@@ -1676,7 +1676,7 @@ Default value: `$zabbix::params::agent_allowkey`
 
 ##### <a name="-zabbix--agent--denykey"></a>`denykey`
 
-Data type: `Optional[String[1]]`
+Data type: `Optional[Variant[String[1],Array[String[1]]]]`
 
 Deny execution of items keys matching pattern.
 

@@ -65,7 +65,11 @@ DebugLevel=<%= @debuglevel %>
 #	If no AllowKey or DenyKey rules defined, all keys are allowed.
 #
 # Mandatory: no
-<%    if @allowkey %>AllowKey=<%= @allowkey -%><% end %>
+<% if @allowkey -%>
+  <%- Array(@allowkey).each do |akey| -%>
+  AllowKey=<%= akey %>;
+  <%- end -%>
+<% end -%>
 
 ### Option: DenyKey
 #	Deny execution of items keys matching pattern.
@@ -76,7 +80,11 @@ DebugLevel=<%= @debuglevel %>
 #       Unless another system.run[*] rule is specified DenyKey=system.run[*] is added by default.
 #
 # Mandatory: no
-<%    if @denykey %>DenyKey=<%= @denykey -%><% end %>
+<% if @denykey -%>
+  <%- Array(@denykey).each do |dkey| -%>
+  DenyKey=<%= dkey %>;
+  <%- end -%>
+<% end -%>
 <% unless @agent2 %>
 
 ### Option: EnableRemoteCommands - Deprecated, use AllowKey=system.run[*] or DenyKey=system.run[*] instead
