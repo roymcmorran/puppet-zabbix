@@ -66,8 +66,7 @@ DebugLevel=<%= @debuglevel %>
 #
 # Mandatory: no
 <% if @allowkey -%>
-  <%- Array(@allowkey).each do |akey| -%>
-  AllowKey=<%= akey %>;
+  <%- Array(@allowkey).each do |akey| -%>AllowKey=<%= akey %>;
   <%- end -%>
 <% end -%>
 
@@ -81,8 +80,7 @@ DebugLevel=<%= @debuglevel %>
 #
 # Mandatory: no
 <% if @denykey -%>
-  <%- Array(@denykey).each do |dkey| -%>
-  DenyKey=<%= dkey %>;
+  <%- Array(@denykey).each do |dkey| -%>DenyKey=<%= dkey %>;
   <%- end -%>
 <% end -%>
 <% unless @agent2 %>
